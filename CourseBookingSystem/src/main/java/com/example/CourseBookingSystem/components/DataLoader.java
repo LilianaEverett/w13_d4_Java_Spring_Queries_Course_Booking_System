@@ -4,7 +4,7 @@ import com.example.CourseBookingSystem.models.Booking;
 import com.example.CourseBookingSystem.models.Course;
 import com.example.CourseBookingSystem.models.Customer;
 import com.example.CourseBookingSystem.repositories.BookingRepository;
-import com.example.CourseBookingSystem.repositories.CourseRepository;
+import com.example.CourseBookingSystem.repositories.CourseRepository.CourseRepository;
 import com.example.CourseBookingSystem.repositories.CustomerRepository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;

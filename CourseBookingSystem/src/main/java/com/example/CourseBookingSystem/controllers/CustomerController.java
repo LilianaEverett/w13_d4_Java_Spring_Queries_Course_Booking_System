@@ -20,5 +20,5 @@ public class CustomerController {
     @GetMapping(value = "/bookings/course/{courseId}")
     public List<Customer> findAllCustomersForAGivenCourse(@PathVariable Long courseId) {
         return customerRepository.findAllCustomersForAGivenCourse(courseId);
-    };
+    }
 }

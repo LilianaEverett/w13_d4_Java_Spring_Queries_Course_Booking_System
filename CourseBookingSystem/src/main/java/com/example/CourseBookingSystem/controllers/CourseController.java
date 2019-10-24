@@ -1,9 +1,10 @@
 package com.example.CourseBookingSystem.controllers;
 
-import com.example.CourseBookingSystem.models.Course;
-import com.example.CourseBookingSystem.repositories.CourseRepository;
+import com.example.CourseBookingSystem.models.Customer;
+import com.example.CourseBookingSystem.repositories.CourseRepository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,9 +17,9 @@ public class CourseController {
     @Autowired
     CourseRepository courseRepository;
 
-//    @GetMapping
-//    public List<Course> getAllCourses() {
-//        return courseRepository.findAll();
-//    }
+    @GetMapping(value = "/bookings/customer/{customerId}")
+    public List<Customer> findAllCoursesForAGivenCustomer(@PathVariable Long customerId) {
+        return courseRepository.findAllCoursesForAGivenCustomer(customerId);
+    }
 
 }
