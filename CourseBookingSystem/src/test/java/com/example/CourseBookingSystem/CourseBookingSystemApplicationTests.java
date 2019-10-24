@@ -1,9 +1,9 @@
 package com.example.CourseBookingSystem;
 
-import com.example.CourseBookingSystem.models.Course;
+import com.example.CourseBookingSystem.models.Customer;
 import com.example.CourseBookingSystem.repositories.BookingRepository;
 import com.example.CourseBookingSystem.repositories.CourseRepository;
-import com.example.CourseBookingSystem.repositories.CustomerRepository;
+import com.example.CourseBookingSystem.repositories.CustomerRepository.CustomerRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +36,6 @@ class CourseBookingSystemApplicationTests {
 //		List<Course> found = courseRepository.findAllCoursesByRating(5);
 //		assertEquals("Intro to Java", found.get(0).getName());
 //	}
+
 
 }

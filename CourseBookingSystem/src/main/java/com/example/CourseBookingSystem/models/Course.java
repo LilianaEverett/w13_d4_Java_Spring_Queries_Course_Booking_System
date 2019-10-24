@@ -3,6 +3,7 @@ package com.example.CourseBookingSystem.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -30,7 +31,7 @@ public class Course {
         this.name = name;
         this.town = town;
         this.rating = rating;
-        this.bookings = bookings;
+        this.bookings = new ArrayList<Booking>();
     }
 
     public Course() {}
