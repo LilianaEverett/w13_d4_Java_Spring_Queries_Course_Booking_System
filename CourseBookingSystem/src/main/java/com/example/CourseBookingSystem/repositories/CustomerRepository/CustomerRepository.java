@@ -11,12 +11,12 @@ import java.util.List;
 @RepositoryRestResource
 public interface CustomerRepository extends JpaRepository<Customer, Long>, CustomerRepositoryCustom {
 
-//    @Query(
-//            value = "SELECT *" +
-//                    "FROM customers" +
-//                    "INNER JOIN bookings ON customers.id = bookings.customer_id" +
-//                    "WHERE bookings.course_id = courseId",
-//            nativeQuery = true)
+    @Query(
+            value = "SELECT * " +
+                    "FROM customers " +
+                    "INNER JOIN bookings ON customers.id = bookings.customer_id " +
+                    "WHERE bookings.course_id = ?1",
+            nativeQuery = true)
     List<Customer> findAllCustomersForAGivenCourse(Long courseId);
 
 }
