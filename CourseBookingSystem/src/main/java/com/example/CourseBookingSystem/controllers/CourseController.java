@@ -1,5 +1,6 @@
 package com.example.CourseBookingSystem.controllers;
 
+import com.example.CourseBookingSystem.models.Course;
 import com.example.CourseBookingSystem.models.Customer;
 import com.example.CourseBookingSystem.repositories.CourseRepository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class CourseController {
     CourseRepository courseRepository;
 
     @GetMapping(value = "/bookings/customer/{customerId}")
-    public List<Customer> findAllCoursesForAGivenCustomer(@PathVariable Long customerId) {
+    public List<Course> findAllCoursesForAGivenCustomer(@PathVariable Long customerId) {
         return courseRepository.findAllCoursesForAGivenCustomer(customerId);
     }
 
